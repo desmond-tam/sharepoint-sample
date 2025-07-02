@@ -1,0 +1,42 @@
+              <div class="card info-card">
+
+                <div class="filter">
+                  <a class="icon" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
+                  <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                    <li class="dropdown-header text-start">
+                      <h6>Filter</h6>
+                    </li>
+
+                    <li><a class="dropdown-item" href="#">Today</a></li>
+                    <li><a class="dropdown-item" href="#">This Month</a></li>
+                    <li><a class="dropdown-item" href="#">This Year</a></li>
+                  </ul>
+                </div>
+
+                <div class="card-body">
+                  <h5 class="card-title"><span>{{card?.Title}}</span></h5>
+                  <div class="card-text">
+                    <div><span class="author-container" title="Author">{{card?.Author?.Title}}</span></div>
+                    <p class="description-container">
+                      {{card?.Description}}
+                    </p>
+                    <div class="card-summary-title">
+                      Summary
+                    </div>
+                      <p class="summary-container">
+                         {{card?.Summary}}
+                      </p>
+                  </div>
+                  <div class="attachment-container">
+                    <ng-container *ngFor="let attachment of card?.Attachments">
+                        <a title="{{attachment.FileName}}"><i class="bi bi-file-pdf"></i></a>
+                    </ng-container>
+                  </div>
+                  <div class="card-footer">
+                    <div class="button-holder">
+                      <button type="button" class="btn btn-info">details</button>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
